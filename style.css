@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+/* colors */
+:root {
+    --main-dark: #0B0C10;
+    --gray: #1F2833;
+    --off-white: #C5C6C7;
+    --cyan: #66FCF1;
+    --cyan-dark: #45A29E;
+  }
+
+/* general */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-dark);
+    color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+/* header */
+header {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currentScore {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+#currentScore > * {
+    font-size: 30px;
+}
+
+.symbols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.symbols p {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    list-style-type: none;
+    border-top: 3px solid var(--cyan);
+    padding-top: 10px;
+}
+
+/* buttons */
+#buttonContainer {
+    display: flex;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--cyan);
+    padding: 20px;
+}
+
+i {
+    margin: 0 !important;
+}
+
+
+/* footer */
+footer {
+    padding: 30px 0;
+}
+
+footer i {
+    margin-left: 10px !important;
+}
+
+/* modal */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent {
+    width: 500px;
+    padding: 30px;
+    margin: 15% auto;
+    border: 2px solid var(--cyan-dark);
+    background-color: var(--main-dark);
+    text-align: center;
+    font-size: 30px;
+}
+
+#playAgain {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#message {
+    font-weight: bold;
+}
